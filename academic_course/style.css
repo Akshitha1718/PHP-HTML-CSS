@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Outfit', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    padding: 3rem 1.5rem;
+    background: linear-gradient(135deg, #090d16 0%, #0f172a 40%, #064e3b 80%, #022c22 100%);
+    background-attachment: fixed;
+    color: #f8fafc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.portal-wrapper {
+    width: 100%;
+    max-width: 1100px;
+}
+
+.portal-header {
+    text-align: center;
+    margin-bottom: 3.5rem;
+}
+
+.portal-tag {
+    display: inline-block;
+    padding: 0.4rem 1.2rem;
+    background: rgba(16, 185, 129, 0.15);
+    border: 1px solid rgba(16, 185, 129, 0.4);
+    color: #34d399;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    border-radius: 30px;
+    margin-bottom: 1rem;
+}
+
+.portal-header h1 {
+    font-size: 2.8rem;
+    font-weight: 800;
+    background: linear-gradient(to right, #ffffff, #6ee7b7, #38bdf8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: -0.03em;
+}
+
+.portal-header p {
+    color: #94a3b8;
+    font-size: 1.05rem;
+    margin-top: 0.5rem;
+}
+
+.course-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.8rem;
+}
+
+.course-card {
+    background: rgba(15, 23, 42, 0.75);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 1.8rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all 0.35s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.course-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+}
+
+.cyan-theme::before { background: linear-gradient(90deg, #06b6d4, #3b82f6); }
+.emerald-theme::before { background: linear-gradient(90deg, #10b981, #059669); }
+.violet-theme::before { background: linear-gradient(90deg, #8b5cf6, #ec4899); }
+.amber-theme::before { background: linear-gradient(90deg, #f59e0b, #ef4444); }
+
+.course-card:hover {
+    transform: translateY(-8px);
+    border-color: rgba(255, 255, 255, 0.25);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+}
+
+.card-badge {
+    align-self: flex-start;
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 0.3rem 0.75rem;
+    border-radius: 8px;
+    margin-bottom: 1.2rem;
+}
+
+.cyan-theme .card-badge { background: rgba(6, 182, 212, 0.15); color: #22d3ee; }
+.emerald-theme .card-badge { background: rgba(16, 185, 129, 0.15); color: #34d399; }
+.violet-theme .card-badge { background: rgba(139, 92, 246, 0.15); color: #a78bfa; }
+.amber-theme .card-badge { background: rgba(245, 158, 11, 0.15); color: #fbbf24; }
+
+.course-card h3 {
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: #f1f5f9;
+    margin-bottom: 0.5rem;
+}
+
+.instructor {
+    font-size: 0.85rem;
+    color: #64748b;
+    margin-bottom: 0.8rem;
+}
+
+.instructor span {
+    color: #cbd5e1;
+    font-weight: 600;
+}
+
+.desc {
+    font-size: 0.9rem;
+    color: #94a3b8;
+    line-height: 1.5;
+    margin-bottom: 1.8rem;
+}
+
+.card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    padding-top: 1rem;
+}
+
+.duration {
+    font-size: 0.82rem;
+    color: #64748b;
+    font-weight: 600;
+}
+
+.card-btn {
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.cyan-theme .card-btn { color: #22d3ee; }
+.emerald-theme .card-btn { color: #34d399; }
+.violet-theme .card-btn { color: #a78bfa; }
+.amber-theme .card-btn { color: #fbbf24; }
+
+.card-btn:hover {
+    text-decoration: underline;
+}
+
+.portal-footer {
+    text-align: center;
+    margin-top: 3.5rem;
+    color: #64748b;
+    font-size: 0.9rem;
+}
+
+.portal-footer strong {
+    color: #34d399;
+}
