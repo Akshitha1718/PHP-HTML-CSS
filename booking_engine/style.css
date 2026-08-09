@@ -1,0 +1,481 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;700;800&family=Space+Grotesk:wght@600;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    padding: 3rem 1rem;
+    /* Theme: Tropical Cyber Sunset (Vivid Coral, Neon Cyan, Emerald & Deep Night Sky) */
+    background: radial-gradient(circle at 10% 20%, rgba(255, 42, 117, 0.3) 0%, transparent 40%),
+                radial-gradient(circle at 90% 80%, rgba(0, 229, 255, 0.25) 0%, transparent 45%),
+                radial-gradient(circle at 50% 50%, rgba(16, 185, 129, 0.2) 0%, transparent 50%),
+                linear-gradient(135deg, #090914 0%, #03040a 100%);
+    background-attachment: fixed;
+    color: #f1f5f9;
+    display: flex;
+    justify-content: center;
+}
+
+.engine-container {
+    width: 100%;
+    max-width: 900px;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+/* APP HEADER */
+.app-header {
+    text-align: center;
+}
+
+.header-tag {
+    display: inline-block;
+    background: linear-gradient(135deg, #ff2a75, #ffb800);
+    color: #ffffff;
+    font-size: 0.75rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    padding: 0.4rem 1.1rem;
+    border-radius: 30px;
+    margin-bottom: 0.75rem;
+    box-shadow: 0 4px 20px rgba(255, 42, 117, 0.4);
+}
+
+.app-header h1 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 2.6rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    background: linear-gradient(135deg, #ffffff 30%, #00e5ff 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.app-header p {
+    color: #94a3b8;
+    font-size: 0.95rem;
+    margin-top: 0.4rem;
+}
+
+/* VOUCHER TICKET CARD */
+.voucher-card {
+    background: rgba(15, 17, 33, 0.92);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-top: 6px solid #00e5ff;
+    border-radius: 24px;
+    padding: 2rem;
+    box-shadow: 0 25px 60px rgba(0,0,0,0.8), 0 0 30px rgba(0, 229, 255, 0.15);
+    position: relative;
+}
+
+.voucher-badge {
+    position: absolute;
+    top: 1.5rem;
+    right: 2rem;
+    background: rgba(16, 185, 129, 0.2);
+    color: #34d399;
+    border: 1px solid rgba(52, 211, 153, 0.4);
+    padding: 0.35rem 0.85rem;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.voucher-header h2 {
+    font-size: 1.6rem;
+    color: #ffffff;
+    margin-bottom: 0.3rem;
+}
+
+.v-location {
+    font-size: 0.85rem;
+    color: #00e5ff;
+    font-weight: 700;
+}
+
+.v-id {
+    margin-top: 0.75rem;
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 0.4rem 0.85rem;
+    border-radius: 8px;
+}
+
+.v-id span {
+    font-size: 0.7rem;
+    color: #94a3b8;
+    display: block;
+}
+
+.v-id strong {
+    font-family: monospace;
+    color: #ffb800;
+    font-size: 1rem;
+}
+
+.voucher-details-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1rem;
+    margin: 1.5rem 0;
+    padding: 1.25rem;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 16px;
+}
+
+.v-item span {
+    display: block;
+    font-size: 0.72rem;
+    color: #94a3b8;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.v-item strong {
+    font-size: 0.95rem;
+    color: #ffffff;
+}
+
+.v-addons {
+    margin-bottom: 1.5rem;
+    font-size: 0.85rem;
+}
+
+.v-addons span {
+    color: #f0abfc;
+    font-weight: 700;
+    display: block;
+    margin-bottom: 0.4rem;
+}
+
+.v-addons ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}
+
+.v-addons li {
+    background: rgba(255, 42, 117, 0.15);
+    border: 1px solid rgba(255, 42, 117, 0.3);
+    padding: 0.3rem 0.75rem;
+    border-radius: 10px;
+    color: #ff85b3;
+    font-weight: 600;
+}
+
+.v-pricing {
+    border-top: 1px dashed rgba(255, 255, 255, 0.15);
+    padding-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.price-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.88rem;
+    color: #cbd5e1;
+}
+
+.total-row {
+    margin-top: 0.5rem;
+    font-weight: 800;
+    font-size: 1.15rem;
+    color: #ffffff;
+}
+
+.total-amount {
+    color: #34d399;
+    font-size: 1.4rem;
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+/* FORM STYLING */
+.booking-form {
+    background: rgba(15, 17, 33, 0.85);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 28px;
+    padding: 2.2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.8rem;
+    box-shadow: 0 30px 70px rgba(0, 0, 0, 0.7);
+}
+
+.section-title {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #00e5ff;
+    letter-spacing: -0.01em;
+}
+
+/* PACKAGE CARDS SELECTOR */
+.package-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+.package-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 18px;
+    padding: 1.25rem;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.25s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.package-card input[type="radio"] {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    accent-color: var(--accent-color);
+}
+
+.package-card:hover {
+    background: rgba(255, 255, 255, 0.07);
+    border-color: var(--accent-color);
+    transform: translateY(-3px);
+}
+
+.package-card.selected {
+    border-color: var(--accent-color);
+    background: rgba(255, 255, 255, 0.08);
+    box-shadow: 0 0 20px rgba(0, 229, 255, 0.15);
+}
+
+.card-badge {
+    align-self: flex-start;
+    color: #ffffff;
+    font-size: 0.65rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    padding: 0.25rem 0.65rem;
+    border-radius: 8px;
+    margin-bottom: 0.75rem;
+}
+
+.package-card h3 {
+    font-size: 1rem;
+    color: #ffffff;
+    margin-bottom: 0.35rem;
+}
+
+.pkg-loc {
+    font-size: 0.75rem;
+    color: #00e5ff;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.pkg-desc {
+    font-size: 0.78rem;
+    color: #94a3b8;
+    line-height: 1.3;
+    margin-bottom: 1rem;
+}
+
+.pkg-price {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.pkg-price small {
+    font-size: 0.7rem;
+    color: #94a3b8;
+    font-weight: 400;
+}
+
+/* INPUTS GRID */
+.inputs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.2rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.form-group label {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: #cbd5e1;
+}
+
+.form-group input {
+    background: rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 12px;
+    padding: 0.75rem 1rem;
+    color: #ffffff;
+    font-size: 0.9rem;
+    outline: none;
+    transition: border-color 0.2s ease;
+}
+
+.form-group input:focus {
+    border-color: #00e5ff;
+}
+
+.guests-counter {
+    display: flex;
+    flex-direction: row;
+    gap: 0.75rem;
+}
+
+.guests-counter > div {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+/* ADDONS GRID */
+.addons-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 0.85rem;
+}
+
+.addon-card {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 14px;
+    padding: 0.85rem 1rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.addon-card:hover {
+    background: rgba(255, 255, 255, 0.07);
+    border-color: #ff2a75;
+}
+
+.addon-card input[type="checkbox"] {
+    accent-color: #ff2a75;
+    width: 18px;
+    height: 18px;
+}
+
+.addon-info strong {
+    display: block;
+    font-size: 0.82rem;
+    color: #ffffff;
+}
+
+.addon-info span {
+    font-size: 0.72rem;
+    color: #ffb800;
+    font-weight: 700;
+}
+
+/* BUTTON */
+.btn-submit {
+    margin-top: 0.5rem;
+    padding: 1.1rem;
+    border: none;
+    border-radius: 16px;
+    background: linear-gradient(135deg, #ff2a75 0%, #ffb800 50%, #00e5ff 100%);
+    background-size: 200% auto;
+    color: #ffffff;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 10px 30px rgba(255, 42, 117, 0.4);
+    transition: all 0.3s ease;
+}
+
+.btn-submit:hover {
+    background-position: right center;
+    transform: translateY(-2px);
+    box-shadow: 0 15px 35px rgba(0, 229, 255, 0.4);
+}
+
+/* SESSION HISTORY */
+.history-block {
+    background: rgba(15, 17, 33, 0.7);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 20px;
+    padding: 1.25rem;
+}
+
+.history-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.75rem;
+    color: #94a3b8;
+    text-transform: uppercase;
+    font-weight: 800;
+    margin-bottom: 0.85rem;
+}
+
+.clear-btn {
+    color: #ef4444;
+    text-decoration: none;
+}
+
+.history-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+
+.history-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.03);
+    padding: 0.65rem 1rem;
+    border-radius: 12px;
+    font-size: 0.82rem;
+}
+
+.history-item strong {
+    display: block;
+    color: #ffffff;
+}
+
+.history-item span {
+    font-size: 0.72rem;
+    color: #94a3b8;
+}
+
+.hist-price {
+    font-family: 'Space Grotesk', sans-serif;
+    color: #34d399;
+    font-weight: 700;
+}
+
+@media (max-width: 600px) {
+    .package-grid, .inputs-grid, .addons-grid {
+        grid-template-columns: 1fr;
+    }
+}
