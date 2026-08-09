@@ -1,0 +1,392 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;700;800&family=Space+Grotesk:wght@600;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    padding: 3rem 1rem;
+    /* Aesthetic: Cyber-Amber Sunset & Imperial Violet */
+    background: radial-gradient(circle at 10% 15%, rgba(255, 184, 0, 0.22) 0%, transparent 40%),
+                radial-gradient(circle at 90% 85%, rgba(224, 36, 36, 0.18) 0%, transparent 45%),
+                radial-gradient(circle at 50% 50%, rgba(139, 92, 246, 0.15) 0%, transparent 50%),
+                linear-gradient(135deg, #090714 0%, #030208 100%);
+    background-attachment: fixed;
+    color: #f8fafc;
+    display: flex;
+    justify-content: center;
+}
+
+.payroll-container {
+    width: 100%;
+    max-width: 940px;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+/* APP HEADER */
+.app-header {
+    text-align: center;
+}
+
+.header-pill {
+    display: inline-block;
+    background: linear-gradient(135deg, #ffb800, #ff4500);
+    color: #000000;
+    font-size: 0.75rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    padding: 0.4rem 1.1rem;
+    border-radius: 30px;
+    margin-bottom: 0.75rem;
+    box-shadow: 0 4px 20px rgba(255, 184, 0, 0.35);
+}
+
+.app-header h1 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    background: linear-gradient(135deg, #ffffff 30%, #ffb800 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+}
+
+.app-header p {
+    color: #94a3b8;
+    font-size: 0.95rem;
+    margin-top: 0.4rem;
+}
+
+/* PAYSTUB DISPLAY CARD */
+.paystub-card {
+    background: rgba(15, 12, 29, 0.93);
+    backdrop-filter: blur(25px);
+    -webkit-backdrop-filter: blur(25px);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-top: 6px solid #ffb800;
+    border-radius: 24px;
+    padding: 2.2rem;
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.85);
+}
+
+.stub-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1.5rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    padding-bottom: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.brand-badge {
+    color: #ffb800;
+    font-size: 0.72rem;
+    font-weight: 800;
+    letter-spacing: 0.1em;
+    display: block;
+    margin-bottom: 0.3rem;
+}
+
+.company-brand h2 {
+    font-size: 1.6rem;
+    color: #ffffff;
+}
+
+.company-brand p {
+    font-size: 0.88rem;
+    color: #94a3b8;
+    margin-top: 0.2rem;
+}
+
+.net-payout-box {
+    text-align: right;
+    background: rgba(255, 184, 0, 0.08);
+    border: 1px solid rgba(255, 184, 0, 0.3);
+    padding: 1rem 1.4rem;
+    border-radius: 18px;
+}
+
+.net-title {
+    display: block;
+    font-size: 0.7rem;
+    color: #ffb800;
+    font-weight: 800;
+    letter-spacing: 0.1em;
+}
+
+.net-amount {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #34d399;
+    display: block;
+    line-height: 1.1;
+    margin: 0.2rem 0;
+}
+
+.net-ratio {
+    font-size: 0.75rem;
+    color: #cbd5e1;
+}
+
+/* EMPLOYEE SUMMARY BAR */
+.emp-summary-bar {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+    gap: 1rem;
+    background: rgba(0, 0, 0, 0.35);
+    padding: 1.2rem;
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    margin-bottom: 1.5rem;
+}
+
+.emp-summary-bar span {
+    display: block;
+    font-size: 0.7rem;
+    color: #64748b;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.emp-summary-bar strong {
+    font-size: 0.92rem;
+    color: #f1f5f9;
+}
+
+/* BREAKDOWN GRID */
+.pay-breakdown-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.breakdown-col {
+    background: rgba(0, 0, 0, 0.25);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 18px;
+    padding: 1.25rem;
+}
+
+.col-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    padding-bottom: 0.75rem;
+    margin-bottom: 1rem;
+    font-size: 0.8rem;
+    font-weight: 800;
+}
+
+.earnings-col .col-title strong { color: #34d399; font-size: 1.1rem; }
+.deductions-col .col-title strong { color: #ff75a0; font-size: 1.1rem; }
+
+.pay-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.pay-list li {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.85rem;
+    color: #cbd5e1;
+}
+
+.pay-list li strong {
+    color: #ffffff;
+}
+
+/* DISTRIBUTION BAR */
+.distribution-bar-wrapper {
+    margin-bottom: 1.5rem;
+}
+
+.dist-labels {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.75rem;
+    color: #94a3b8;
+    font-weight: 700;
+    margin-bottom: 0.4rem;
+}
+
+.dist-track {
+    display: flex;
+    height: 12px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.dist-fill.net-fill {
+    background: linear-gradient(90deg, #10b981, #34d399);
+}
+
+.dist-fill.ded-fill {
+    background: linear-gradient(90deg, #f43f5e, #ff75a0);
+}
+
+.stub-footer {
+    border-top: 1px dashed rgba(255, 255, 255, 0.12);
+    padding-top: 1rem;
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.78rem;
+    color: #64748b;
+}
+
+.stub-footer code {
+    color: #ffb800;
+}
+
+/* FORM STYLING */
+.payroll-form {
+    background: rgba(15, 12, 29, 0.85);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 24px;
+    padding: 2.2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    box-shadow: 0 30px 70px rgba(0, 0, 0, 0.7);
+}
+
+.form-section-head {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #ffb800;
+}
+
+.form-row.quad {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+    gap: 1.1rem;
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.field label {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: #cbd5e1;
+}
+
+.field input {
+    background: rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 12px;
+    padding: 0.75rem 1rem;
+    color: #ffffff;
+    font-size: 0.9rem;
+    outline: none;
+    transition: border-color 0.2s ease;
+}
+
+.field input:focus {
+    border-color: #ffb800;
+}
+
+.calculate-btn {
+    margin-top: 0.5rem;
+    padding: 1.1rem;
+    border: none;
+    border-radius: 16px;
+    background: linear-gradient(135deg, #ffb800 0%, #ff4500 50%, #8b5cf6 100%);
+    background-size: 200% auto;
+    color: #000000;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 800;
+    cursor: pointer;
+    box-shadow: 0 10px 30px rgba(255, 184, 0, 0.3);
+    transition: all 0.3s ease;
+}
+
+.calculate-btn:hover {
+    background-position: right center;
+    transform: translateY(-2px);
+    box-shadow: 0 15px 35px rgba(255, 69, 0, 0.4);
+}
+
+/* HISTORY BLOCK */
+.history-block {
+    background: rgba(15, 12, 29, 0.7);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 20px;
+    padding: 1.25rem;
+}
+
+.history-header {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.75rem;
+    color: #94a3b8;
+    text-transform: uppercase;
+    font-weight: 800;
+    margin-bottom: 0.85rem;
+}
+
+.clear-btn {
+    color: #ef4444;
+    text-decoration: none;
+}
+
+.history-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+
+.history-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.03);
+    padding: 0.7rem 1rem;
+    border-radius: 12px;
+    font-size: 0.85rem;
+}
+
+.history-row strong {
+    display: block;
+    color: #ffffff;
+}
+
+.history-row span {
+    font-size: 0.72rem;
+    color: #94a3b8;
+}
+
+.hist-net {
+    font-family: 'Space Grotesk', sans-serif;
+    color: #34d399;
+    font-weight: 700;
+    font-size: 1.05rem;
+}
+
+@media (max-width: 700px) {
+    .pay-breakdown-grid {
+        grid-template-columns: 1fr;
+    }
+}
