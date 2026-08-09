@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Details Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="glass-card">
+        <div class="card-header">
+            <span class="badge">Academic Portal</span>
+            <h2>Student Details Form</h2>
+            <p>Enter your profile details below for processing</p>
+        </div>
+        
+        <form action="process.php" method="POST">
+            <div class="form-group">
+                <label for="fullName">Full Name</label>
+                <input type="text" id="fullName" name="fullName" placeholder="e.g. Alex Morgan" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="rollNo">Roll / Registration Number</label>
+                <input type="text" id="rollNo" name="rollNo" placeholder="e.g. 2026-CS-101" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="department">Department</label>
+                <select id="department" name="department" required>
+                    <option value="" disabled selected>Select Department</option>
+                    <option value="Computer Science">Computer Science</option>
+                    <option value="Information Technology">Information Technology</option>
+                    <option value="Software Engineering">Software Engineering</option>
+                    <option value="Data Analytics">Data Analytics</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="semester">Semester</label>
+                <input type="number" id="semester" name="semester" min="1" max="8" placeholder="1 to 8" required>
+            </div>
+            
+            <button type="submit" class="submit-btn">Submit Profile Data</button>
+        </form>
+    </div>
+</body>
+</html>
