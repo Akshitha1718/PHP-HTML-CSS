@@ -51,7 +51,7 @@ Working through these 28 application modules highlights core competencies in:
 
 ## Laboratory Documentation
 Access the comprehensive project report and code documentation here:  
-📄 **[View WDD Laboratory Documentation]()**
+📄 **[View WDD Laboratory Documentation](https://docs.google.com/document/d/1fGV6r-AcOY6haT0PKzosG6M1WOuTeBjU79jUv7MVEVQ/edit?tab=t.nkol90gms4gz)**
 
 ---
 
