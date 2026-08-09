@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2.5rem 1rem;
+    /* Unique Theme: Sunset Crimson & Electric Indigo Mesh */
+    background: radial-gradient(circle at 20% 20%, #ff2a5f 0%, transparent 40%),
+                radial-gradient(circle at 80% 80%, #7000ff 0%, transparent 40%),
+                radial-gradient(circle at 50% 50%, #ff8c00 0%, transparent 50%),
+                linear-gradient(135deg, #12002b 0%, #080014 100%);
+    background-attachment: fixed;
+    color: #ffffff;
+}
+
+.admission-wrapper {
+    width: 100%;
+    max-width: 580px;
+    background: rgba(20, 10, 35, 0.75);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 28px;
+    padding: 2.8rem;
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.5),
+                0 0 40px rgba(255, 42, 95, 0.25);
+}
+
+.portal-header {
+    text-align: center;
+    margin-bottom: 2.2rem;
+}
+
+.tagline {
+    display: inline-block;
+    background: linear-gradient(135deg, #ff2a5f, #ff8c00);
+    color: #ffffff;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    padding: 0.4rem 1rem;
+    border-radius: 30px;
+    margin-bottom: 0.8rem;
+    box-shadow: 0 4px 15px rgba(255, 42, 95, 0.4);
+}
+
+.portal-header h1 {
+    font-size: 2.1rem;
+    font-weight: 700;
+    background: linear-gradient(135deg, #ffffff 30%, #ff8c00 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: -0.02em;
+}
+
+.portal-header p {
+    color: #a0a0c0;
+    font-size: 0.92rem;
+    margin-top: 0.4rem;
+}
+
+.admission-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.form-row {
+    display: flex;
+    gap: 1rem;
+}
+
+.form-group {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #e0d0ff;
+}
+
+input, select {
+    width: 100%;
+    padding: 0.85rem 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 14px;
+    font-size: 0.95rem;
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.07);
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+input::placeholder {
+    color: #706090;
+}
+
+select option {
+    background: #12002b;
+    color: #ffffff;
+}
+
+input:focus, select:focus {
+    border-color: #ff2a5f;
+    background: rgba(255, 255, 255, 0.12);
+    box-shadow: 0 0 18px rgba(255, 42, 95, 0.35);
+}
+
+.submit-btn {
+    margin-top: 1rem;
+    padding: 1rem;
+    border: none;
+    border-radius: 14px;
+    background: linear-gradient(135deg, #ff2a5f 0%, #7000ff 100%);
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 10px 25px rgba(255, 42, 95, 0.4);
+    transition: all 0.3s ease;
+}
+
+.submit-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 15px 30px rgba(112, 0, 255, 0.5);
+}
+
+/* Receipt Styles */
+.receipt-card {
+    border-top: 4px solid #ff2a5f;
+}
+
+.status-badge {
+    display: inline-block;
+    padding: 0.4rem 1rem;
+    border-radius: 12px;
+    font-weight: 700;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    margin-bottom: 1.2rem;
+}
+
+.status-approved {
+    background: rgba(16, 185, 129, 0.2);
+    border: 1px solid #10b981;
+    color: #34d399;
+}
+
+.status-rejected {
+    background: rgba(239, 68, 68, 0.2);
+    border: 1px solid #ef4444;
+    color: #f87171;
+}
+
+.receipt-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.2rem 0;
+}
+
+.receipt-table td {
+    padding: 0.8rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    font-size: 0.92rem;
+}
+
+.receipt-table td:first-child {
+    color: #a0a0c0;
+}
+
+.receipt-table td:last-child {
+    text-align: right;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+.back-link {
+    display: block;
+    text-align: center;
+    margin-top: 1.5rem;
+    color: #ff8c00;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.9rem;
+    transition: color 0.2s;
+}
+
+.back-link:hover {
+    color: #ff2a5f;
+}
