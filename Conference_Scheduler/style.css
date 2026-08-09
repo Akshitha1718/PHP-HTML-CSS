@@ -1,0 +1,301 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@600;800&family=Plus+Jakarta+Sans:wght@500;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    padding: 3rem 1rem;
+    /* Aesthetic: Sunset Velvet & Botanical Dark (Deep Indigo, Sunset Coral, Solar Amber, Electric Mint) */
+    background: radial-gradient(circle at 12% 18%, rgba(255, 107, 107, 0.2) 0%, transparent 45%),
+                radial-gradient(circle at 88% 82%, rgba(0, 210, 211, 0.18) 0%, transparent 45%),
+                radial-gradient(circle at 50% 50%, rgba(251, 197, 49, 0.12) 0%, transparent 55%),
+                linear-gradient(135deg, #100a1c 0%, #06030c 100%);
+    background-attachment: fixed;
+    color: #f8fafc;
+    display: flex;
+    justify-content: center;
+}
+
+.portal-container {
+    width: 100%;
+    max-width: 900px;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.app-header {
+    text-align: center;
+}
+
+.header-pill {
+    display: inline-block;
+    background: linear-gradient(135deg, #ff6b6b, #fbc531);
+    color: #06030c;
+    font-size: 0.75rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    padding: 0.4rem 1.1rem;
+    border-radius: 30px;
+    margin-bottom: 0.75rem;
+}
+
+.app-header h1 {
+    font-family: 'Outfit', sans-serif;
+    font-size: 2.3rem;
+    font-weight: 800;
+    background: linear-gradient(135deg, #ffffff 30%, #ff6b6b 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+}
+
+.app-header p {
+    color: #94a3b8;
+    font-size: 0.95rem;
+    margin-top: 0.4rem;
+}
+
+/* PASS CARD */
+.pass-card {
+    background: rgba(22, 14, 38, 0.9);
+    backdrop-filter: blur(25px);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-top: 6px solid #ff6b6b;
+    border-radius: 24px;
+    padding: 2.2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.8);
+}
+
+.card-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    padding-bottom: 1.25rem;
+}
+
+.pass-id {
+    font-size: 0.72rem;
+    color: #fbc531;
+    font-weight: 800;
+    letter-spacing: 0.1em;
+}
+
+.card-top h2 {
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.6rem;
+    color: #ffffff;
+}
+
+.pass-meta {
+    font-size: 0.88rem;
+    color: #94a3b8;
+}
+
+.format-badge {
+    padding: 0.4rem 1rem;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 800;
+    border: 1px solid;
+}
+
+/* DETAILS GRID */
+.details-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+
+.d-box {
+    background: rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 16px;
+    padding: 1.1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.d-title {
+    font-size: 0.72rem;
+    color: #94a3b8;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.d-big {
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin: 0.25rem 0;
+    word-break: break-word;
+}
+
+.d-sub {
+    font-size: 0.78rem;
+    color: #cbd5e1;
+}
+
+.text-amber { color: #fbc531 !important; }
+.text-mint { color: #00d2d3 !important; }
+
+.card-footer {
+    border-top: 1px dashed rgba(255, 255, 255, 0.12);
+    padding-top: 0.85rem;
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.78rem;
+    color: #64748b;
+}
+
+/* FORM */
+.schedule-form {
+    background: rgba(22, 14, 38, 0.82);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 24px;
+    padding: 2.2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.form-title {
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #fbc531;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.2rem;
+}
+
+.span-2 { grid-column: span 2; }
+
+.field-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.field-group label {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: #cbd5e1;
+}
+
+.field-group input, .select-input {
+    background: rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 12px;
+    padding: 0.75rem 1rem;
+    color: #ffffff;
+    font-size: 0.9rem;
+    outline: none;
+}
+
+.select-input option {
+    background: #100a1c;
+    color: #ffffff;
+}
+
+.field-group input:focus, .select-input:focus {
+    border-color: #ff6b6b;
+}
+
+.submit-btn {
+    padding: 1.1rem;
+    border: none;
+    border-radius: 16px;
+    background: linear-gradient(135deg, #ff6b6b 0%, #fbc531 100%);
+    color: #06030c;
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 800;
+    cursor: pointer;
+    box-shadow: 0 10px 30px rgba(255, 107, 107, 0.3);
+    transition: transform 0.2s ease;
+}
+
+.submit-btn:hover {
+    transform: translateY(-2px);
+}
+
+/* HISTORY */
+.history-panel {
+    background: rgba(22, 14, 38, 0.7);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 20px;
+    padding: 1.25rem;
+}
+
+.history-head {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.75rem;
+    color: #94a3b8;
+    text-transform: uppercase;
+    font-weight: 800;
+    margin-bottom: 0.85rem;
+}
+
+.clear-btn { color: #ef4444; text-decoration: none; }
+
+.history-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 0.85rem;
+}
+
+.history-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    padding: 0.85rem;
+    border-radius: 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.h-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.h-top strong { font-size: 0.88rem; color: #fff; }
+
+.h-badge {
+    font-size: 0.68rem;
+    font-weight: 800;
+    border: 1px solid;
+    padding: 0.15rem 0.5rem;
+    border-radius: 8px;
+}
+
+.h-sub {
+    font-size: 0.75rem;
+    color: #94a3b8;
+}
+
+@media (max-width: 650px) {
+    .details-grid { grid-template-columns: 1fr; }
+    .form-grid { grid-template-columns: 1fr; }
+    .span-2 { grid-column: span 1; }
+}
