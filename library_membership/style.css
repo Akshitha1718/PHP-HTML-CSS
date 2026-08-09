@@ -1,0 +1,483 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;700;800&family=Space+Grotesk:wght@600;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    padding: 3rem 1rem;
+    /* Aesthetic: Cyber-Neon Library Vault (Deep Indigo, Electrified Teal, Bright Gold, Hot Magenta) */
+    background: radial-gradient(circle at 15% 15%, rgba(0, 229, 255, 0.25) 0%, transparent 40%),
+                radial-gradient(circle at 85% 85%, rgba(255, 42, 117, 0.2) 0%, transparent 45%),
+                radial-gradient(circle at 50% 50%, rgba(255, 184, 0, 0.15) 0%, transparent 50%),
+                linear-gradient(135deg, #070913 0%, #020307 100%);
+    background-attachment: fixed;
+    color: #f1f5f9;
+    display: flex;
+    justify-content: center;
+}
+
+.portal-container {
+    width: 100%;
+    max-width: 920px;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+/* APP HEADER */
+.app-header {
+    text-align: center;
+}
+
+.header-tag {
+    display: inline-block;
+    background: linear-gradient(135deg, #00e5ff, #10b981);
+    color: #030712;
+    font-size: 0.75rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    padding: 0.4rem 1.1rem;
+    border-radius: 30px;
+    margin-bottom: 0.75rem;
+    box-shadow: 0 4px 20px rgba(0, 229, 255, 0.3);
+}
+
+.app-header h1 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    background: linear-gradient(135deg, #ffffff 30%, #ffb800 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+}
+
+.app-header p {
+    color: #94a3b8;
+    font-size: 0.95rem;
+    margin-top: 0.4rem;
+}
+
+/* ID CARD DISPLAY */
+.id-card {
+    background: rgba(13, 16, 31, 0.92);
+    backdrop-filter: blur(25px);
+    -webkit-backdrop-filter: blur(25px);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-top: 6px solid #00e5ff;
+    border-radius: 24px;
+    padding: 2rem;
+    box-shadow: 0 25px 60px rgba(0,0,0,0.8), 0 0 30px rgba(0, 229, 255, 0.12);
+    position: relative;
+    overflow: hidden;
+}
+
+.card-chip {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    width: 48px;
+    height: 36px;
+    background: linear-gradient(135deg, #ffb800, #ff8c00);
+    border-radius: 8px;
+    opacity: 0.85;
+    box-shadow: inset 0 0 8px rgba(0,0,0,0.4);
+}
+
+.card-header h2 {
+    font-size: 1.7rem;
+    color: #ffffff;
+    margin: 0.5rem 0 0.2rem 0;
+}
+
+.tier-pill {
+    display: inline-block;
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 800;
+    border: 1px solid;
+    text-transform: uppercase;
+}
+
+.institution-text {
+    font-size: 0.88rem;
+    color: #94a3b8;
+}
+
+.id-number {
+    margin-top: 0.85rem;
+    display: inline-block;
+    background: rgba(0, 0, 0, 0.4);
+    padding: 0.45rem 0.9rem;
+    border-radius: 10px;
+    border: 1px solid rgba(255,255,255,0.08);
+}
+
+.id-number span {
+    font-size: 0.68rem;
+    color: #64748b;
+    display: block;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.id-number strong {
+    font-family: monospace;
+    color: #00e5ff;
+    font-size: 1.1rem;
+    letter-spacing: 0.05em;
+}
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+    gap: 1rem;
+    margin: 1.5rem 0;
+    padding: 1.25rem;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 16px;
+    border: 1px solid rgba(255,255,255,0.05);
+}
+
+.c-item span {
+    display: block;
+    font-size: 0.72rem;
+    color: #64748b;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.c-item strong {
+    font-size: 0.92rem;
+    color: #f1f5f9;
+}
+
+.card-permissions {
+    display: flex;
+    flex-direction: column;
+    gap: 0.85rem;
+    margin-bottom: 1.5rem;
+}
+
+.perm-group span {
+    display: block;
+    font-size: 0.75rem;
+    color: #ffb800;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 0.4rem;
+}
+
+.tags-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.tag-badge {
+    background: rgba(16, 185, 129, 0.15);
+    border: 1px solid rgba(16, 185, 129, 0.3);
+    color: #34d399;
+    font-size: 0.78rem;
+    padding: 0.3rem 0.7rem;
+    border-radius: 8px;
+    font-weight: 600;
+}
+
+.tag-badge.spec {
+    background: rgba(255, 42, 117, 0.15);
+    border-color: rgba(255, 42, 117, 0.3);
+    color: #ff75a0;
+}
+
+.card-footer {
+    border-top: 1px dashed rgba(255, 255, 255, 0.12);
+    padding-top: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.85rem;
+    color: #cbd5e1;
+}
+
+.status-live {
+    color: #34d399;
+    font-weight: 800;
+    font-size: 0.75rem;
+    letter-spacing: 0.05em;
+}
+
+/* ENROLLMENT FORM STYLING */
+.registration-form {
+    background: rgba(13, 16, 31, 0.85);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 28px;
+    padding: 2.2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.8rem;
+    box-shadow: 0 30px 70px rgba(0, 0, 0, 0.7);
+}
+
+.section-title {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #00e5ff;
+    letter-spacing: -0.01em;
+}
+
+/* TIER SELECTION GRID */
+.tier-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+.tier-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 18px;
+    padding: 1.25rem;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.25s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.tier-card input[type="radio"] {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    accent-color: var(--accent-color);
+}
+
+.tier-card:hover {
+    background: rgba(255, 255, 255, 0.06);
+    border-color: var(--accent-color);
+    transform: translateY(-3px);
+}
+
+.tier-card.selected {
+    border-color: var(--accent-color);
+    background: rgba(255, 255, 255, 0.08);
+    box-shadow: 0 0 20px rgba(0, 229, 255, 0.15);
+}
+
+.tier-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.75rem;
+}
+
+.tier-badge-label {
+    color: #030712;
+    font-size: 0.65rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    padding: 0.25rem 0.65rem;
+    border-radius: 8px;
+}
+
+.tier-price {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.tier-price small {
+    font-size: 0.7rem;
+    color: #94a3b8;
+}
+
+.tier-card h3 {
+    font-size: 1.05rem;
+    color: #ffffff;
+    margin-bottom: 0.35rem;
+}
+
+.tier-desc {
+    font-size: 0.78rem;
+    color: #94a3b8;
+    line-height: 1.35;
+    margin-bottom: 1rem;
+}
+
+.tier-cap {
+    font-size: 0.8rem;
+    color: #cbd5e1;
+}
+
+/* INPUTS GRID */
+.inputs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.2rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.form-group label {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: #cbd5e1;
+}
+
+.form-group input, .form-group select {
+    background: rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 12px;
+    padding: 0.75rem 1rem;
+    color: #ffffff;
+    font-size: 0.9rem;
+    outline: none;
+    transition: border-color 0.2s ease;
+}
+
+.form-group select option {
+    background: #0d101f;
+    color: #ffffff;
+}
+
+.form-group input:focus, .form-group select:focus {
+    border-color: #00e5ff;
+}
+
+/* GENRES SELECTION */
+.genres-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 0.85rem;
+}
+
+.genre-card {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 14px;
+    padding: 0.85rem 1rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.genre-card:hover {
+    background: rgba(255, 255, 255, 0.07);
+    border-color: #00e5ff;
+}
+
+.genre-card input[type="checkbox"] {
+    accent-color: #00e5ff;
+    width: 18px;
+    height: 18px;
+}
+
+.genre-card span {
+    font-size: 0.82rem;
+    color: #ffffff;
+    font-weight: 600;
+}
+
+/* BUTTON */
+.btn-submit {
+    margin-top: 0.5rem;
+    padding: 1.1rem;
+    border: none;
+    border-radius: 16px;
+    background: linear-gradient(135deg, #00e5ff 0%, #10b981 50%, #ffb800 100%);
+    background-size: 200% auto;
+    color: #030712;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 800;
+    cursor: pointer;
+    box-shadow: 0 10px 30px rgba(0, 229, 255, 0.3);
+    transition: all 0.3s ease;
+}
+
+.btn-submit:hover {
+    background-position: right center;
+    transform: translateY(-2px);
+    box-shadow: 0 15px 35px rgba(16, 185, 129, 0.4);
+}
+
+/* SESSION HISTORY VAULT */
+.history-block {
+    background: rgba(13, 16, 31, 0.7);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 20px;
+    padding: 1.25rem;
+}
+
+.history-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.75rem;
+    color: #94a3b8;
+    text-transform: uppercase;
+    font-weight: 800;
+    margin-bottom: 0.85rem;
+}
+
+.clear-btn {
+    color: #ef4444;
+    text-decoration: none;
+}
+
+.history-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+
+.history-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.03);
+    padding: 0.65rem 1rem;
+    border-radius: 12px;
+    font-size: 0.82rem;
+}
+
+.history-item strong {
+    display: block;
+    color: #ffffff;
+}
+
+.history-item span {
+    font-size: 0.72rem;
+    color: #94a3b8;
+}
+
+.hist-price {
+    font-family: 'Space Grotesk', sans-serif;
+    color: #34d399;
+    font-weight: 700;
+}
+
+@media (max-width: 600px) {
+    .tier-grid, .inputs-grid, .genres-grid {
+        grid-template-columns: 1fr;
+    }
+}
