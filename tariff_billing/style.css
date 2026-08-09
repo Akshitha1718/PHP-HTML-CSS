@@ -1,0 +1,360 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Outfit', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2.5rem 1rem;
+    /* Theme: Cyberpunk Sunset Glass (Neon Fuchsia, Sunset Tangerine & Cosmic Indigo) */
+    background: radial-gradient(circle at 15% 15%, rgba(217, 70, 239, 0.32) 0%, transparent 45%),
+                radial-gradient(circle at 85% 85%, rgba(249, 115, 22, 0.28) 0%, transparent 45%),
+                radial-gradient(circle at 50% 50%, rgba(6, 182, 212, 0.22) 0%, transparent 55%),
+                linear-gradient(135deg, #0f0a1e 0%, #05020c 100%);
+    background-attachment: fixed;
+    color: #f8fafc;
+}
+
+.billing-container {
+    width: 100%;
+    max-width: 620px;
+}
+
+.billing-card {
+    background: rgba(20, 12, 38, 0.88);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    border: 1px solid rgba(217, 70, 239, 0.35);
+    border-radius: 28px;
+    padding: 2.5rem;
+    box-shadow: 0 35px 70px rgba(0, 0, 0, 0.9),
+                0 0 50px rgba(217, 70, 239, 0.2);
+}
+
+.card-header {
+    text-align: center;
+    margin-bottom: 1.8rem;
+}
+
+.badge {
+    display: inline-block;
+    background: linear-gradient(135deg, #d946ef, #f97316);
+    color: #ffffff;
+    font-size: 0.75rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    padding: 0.35rem 0.9rem;
+    border-radius: 20px;
+    margin-bottom: 0.85rem;
+    box-shadow: 0 4px 15px rgba(217, 70, 239, 0.4);
+}
+
+.badge-neon {
+    background: linear-gradient(135deg, #06b6d4, #d946ef);
+    box-shadow: 0 4px 15px rgba(6, 182, 212, 0.4);
+}
+
+.card-header h2 {
+    font-size: 2rem;
+    font-weight: 800;
+    color: #ffffff;
+    letter-spacing: -0.02em;
+}
+
+.card-header p {
+    color: #f0abfc;
+    font-size: 0.88rem;
+    margin-top: 0.35rem;
+}
+
+/* Form Styling */
+.tariff-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.form-row {
+    display: flex;
+    gap: 0.85rem;
+}
+
+.flex-1 { flex: 1; }
+.flex-2 { flex: 2; }
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.45rem;
+}
+
+label {
+    font-size: 0.82rem;
+    font-weight: 700;
+    color: #f5d0fe;
+}
+
+input[type="text"], input[type="number"], select {
+    width: 100%;
+    padding: 0.88rem 1.1rem;
+    border: 1px solid rgba(217, 70, 239, 0.3);
+    border-radius: 14px;
+    font-size: 0.92rem;
+    color: #ffffff;
+    background: rgba(10, 4, 22, 0.6);
+    outline: none;
+    transition: all 0.25s ease;
+}
+
+select option {
+    background: #140c26;
+    color: #ffffff;
+}
+
+input:focus, select:focus {
+    border-color: #f97316;
+    background: rgba(10, 4, 22, 0.85);
+    box-shadow: 0 0 0 3px rgba(249, 115, 22, 0.25);
+}
+
+/* Custom Checkbox Group */
+.checkbox-group {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.85rem;
+    margin-top: 0.2rem;
+}
+
+.checkbox-card {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(217, 70, 239, 0.25);
+    padding: 0.85rem 1rem;
+    border-radius: 14px;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.checkbox-card:hover {
+    background: rgba(217, 70, 239, 0.12);
+    border-color: #d946ef;
+}
+
+.checkbox-card input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    accent-color: #d946ef;
+    cursor: pointer;
+}
+
+.check-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.check-text strong {
+    font-size: 0.82rem;
+    color: #ffffff;
+}
+
+.check-text small {
+    font-size: 0.72rem;
+    color: #f0abfc;
+}
+
+.btn-calculate {
+    margin-top: 0.5rem;
+    padding: 1.05rem;
+    border: none;
+    border-radius: 14px;
+    background: linear-gradient(135deg, #d946ef 0%, #f97316 50%, #06b6d4 100%);
+    background-size: 200% auto;
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: 800;
+    cursor: pointer;
+    box-shadow: 0 10px 25px rgba(217, 70, 239, 0.4);
+    transition: all 0.3s ease;
+}
+
+.btn-calculate:hover {
+    background-position: right center;
+    transform: translateY(-2px);
+    box-shadow: 0 14px 30px rgba(249, 115, 22, 0.45);
+}
+
+/* Invoice Output Styling */
+.subscriber-info {
+    display: flex;
+    justify-content: space-between;
+    background: rgba(217, 70, 239, 0.1);
+    border: 1px solid rgba(217, 70, 239, 0.3);
+    padding: 0.9rem 1.2rem;
+    border-radius: 14px;
+    margin-bottom: 1.5rem;
+    font-size: 0.85rem;
+}
+
+.info-label {
+    display: block;
+    font-size: 0.7rem;
+    color: #f0abfc;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.subscriber-info strong {
+    color: #ffffff;
+    font-size: 0.92rem;
+}
+
+.text-neon {
+    color: #38bdf8 !important;
+}
+
+.statement-breakdown {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+}
+
+.section-title {
+    font-size: 0.75rem;
+    color: #f0abfc;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.2rem;
+}
+
+.line-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.9rem;
+    color: #e2e8f0;
+    padding: 0.6rem 0.85rem;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 10px;
+}
+
+.line-item.subtle {
+    color: #94a3b8;
+    font-size: 0.82rem;
+    background: transparent;
+    padding: 0.2rem 0.85rem;
+}
+
+.warning-line {
+    background: rgba(249, 115, 22, 0.15);
+    border: 1px solid rgba(249, 115, 22, 0.4);
+    color: #fed7aa;
+}
+
+/* Usage Grid Box */
+.usage-summary-box {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.75rem;
+    margin: 0.25rem 0;
+}
+
+.usage-col {
+    background: rgba(0, 0, 0, 0.35);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 12px;
+    padding: 0.75rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+}
+
+.usage-col span {
+    font-size: 0.72rem;
+    color: #f0abfc;
+    font-weight: 700;
+}
+
+.usage-col small {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.85rem;
+    color: #ffffff;
+}
+
+.ok-text {
+    font-size: 0.68rem;
+    color: #4ade80;
+    font-weight: 700;
+}
+
+.sur-text {
+    font-size: 0.68rem;
+    color: #fb923c;
+    font-weight: 700;
+}
+
+/* Total Box */
+.total-due-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(135deg, rgba(217, 70, 239, 0.2), rgba(249, 115, 22, 0.2));
+    border: 1px solid rgba(217, 70, 239, 0.4);
+    border-radius: 16px;
+    padding: 1.2rem;
+    margin-bottom: 1.5rem;
+}
+
+.due-label span {
+    display: block;
+    font-size: 0.85rem;
+    color: #f0abfc;
+    font-weight: 700;
+}
+
+.due-label small {
+    font-size: 0.75rem;
+    color: #94a3b8;
+}
+
+.due-amount {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 1.9rem;
+    font-weight: 700;
+    color: #ffffff;
+    text-shadow: 0 0 15px rgba(217, 70, 239, 0.5);
+}
+
+.btn-reset {
+    display: block;
+    text-align: center;
+    color: #f0abfc;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.9rem;
+    transition: color 0.2s;
+}
+
+.btn-reset:hover {
+    color: #38bdf8;
+}
+
+@media (max-width: 520px) {
+    .form-row, .checkbox-group, .usage-summary-box, .subscriber-info, .total-due-box {
+        grid-template-columns: 1fr;
+        flex-direction: column;
+        gap: 0.8rem;
+    }
+}
